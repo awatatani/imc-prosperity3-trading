@@ -1,7 +1,8 @@
 # imc-prosperity3-trading
+
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/awatatani/imc-prosperity3-trading/total)
 
-> Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 15‑day Prosperity 3 challenge that resulted in rank 25.
+Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 15‑day Prosperity 3 challenge that resulted in **Top 25**.
 
 ### What is **Prosperity**?  
 Prosperity is a **15‑day, 5‑round trading competition** where you build a Python algorithm to buy and sell island‑themed products and earn as many **SeaShells** as possible.  
@@ -32,9 +33,31 @@ Prosperity is a **15‑day, 5‑round trading competition** where you build a Py
 
 ---
 
-### Algorithmic Trading  
+## Algorithmic Trading Strategies
 You have **72 hours per round** to upload your Python algorithm. The **last successfully processed submission** before the deadline is used for that round’s trading session.
 
-### Manual Trading  
+### Round 1
+
+### Round 2
+
+### Round 3
+
+### Round 4
+
+### Round 5
+
+## Manual Trading Strategies 
 In parallel, you also have **72 hours** to place **one manual trade** each round.  
 Manual and algorithmic challenges are independent, each giving you separate profit opportunities.
+
+### Round 1
+
+### Round 2
+
+### Round 3
+
+### Round 4
+
+### Round 5
+
+---

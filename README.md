@@ -1,13 +1,19 @@
-# imc-prosperity3-trading
+# IMC's Prosperity 3 Trading Competition
 
 ![Team Maurya's Banner](images/Team_Maurya_v1.png)
-
 
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/awatatani/imc-prosperity3-trading/total)
 ![GitHub top language](https://img.shields.io/github/languages/top/awatatani/imc-prosperity3-trading)
 
+Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 15‑day Prosperity 3 challenge that resulted in `Top 25` in the World, and `Top 5` in the United States.
 
-Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 15‑day Prosperity 3 challenge that resulted in **Top 25**.
+## Team Members
+
+**Anish Ranjan**
+
+**Allan Watatani**
+
+---
 
 ### What is **Prosperity**?  
 Prosperity is a **15‑day, 5‑round trading competition** where you build a Python algorithm to buy and sell island‑themed products and earn as many **SeaShells** as possible.  

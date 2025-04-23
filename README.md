@@ -1,9 +1,11 @@
 # imc-prosperity3-trading
 
-![A descriptive alt text](images/Team_Maurya_v1.png)
+![Team Maurya's Banner](images/Team_Maurya_v1.png)
 
 
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/awatatani/imc-prosperity3-trading/total)
+![GitHub top language](https://img.shields.io/github/languages/top/awatatani/imc-prosperity3-trading)
+
 
 Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 15‑day Prosperity 3 challenge that resulted in **Top 25**.
 

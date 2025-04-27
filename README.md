@@ -29,19 +29,11 @@ Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 1
 ---
 
 ### What is **Prosperity**?  
-Prosperity is a **15‑day, 5‑round trading competition** where you build a Python algorithm to buy and sell island‑themed products and earn as many **SeaShells** as possible.  
+> Prosperity is a **15‑day, 5‑round trading competition** where you build a Python algorithm to buy and sell island‑themed products and earn as many **SeaShells** as possible.  
 
 * Each round rolls out new products and a one‑off manual‑trading puzzle.  
 * Your python algorithm must handle positions, price dynamics, and conversions to maximize profit.  
 * Your overall ranking is the total SeaShells you’ve accumulated by the end of day 15.
-
----
-
-### Who is **IMC**?  
-> Founded in **1989** on the floor of the Amsterdam Equity Options Exchange, **IMC** quickly recognized that technology could transform manual market‑making.  
-
-* Over 35 years they’ve grown into a global trading firm where **data‑driven algorithms** and **cutting‑edge execution platforms** meet deep trading expertise.  
-* IMC’s entrepreneurial spirit and relentless innovation—fueled by significant investment in tools and talent—enable them to provide liquidity and shape the future of financial markets.
 
 ---
 
@@ -62,13 +54,93 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
 
 ### Round 1
 
+* **Products introduced:**  
+  * `RAINFOREST_RESIN` – historically stable  
+  * `KELP` – regular ups & downs  
+  * `SQUID_INK` – large, fast swings; rumored price pattern  
+
+* **Position limits**
+  | Product | Limit |
+  |---------|------:|
+  | RAINFOREST_RESIN | 50 |
+  | KELP | 50 |
+  | SQUID_INK | 50 |
+
+* **Key hint:**  
+  * Squid Ink’s volatility makes large open positions risky.  
+  * Price spikes tend to **mean-revert**—track the deviation from a recent average and fade extreme moves for edge.
+
 ### Round 2
 
-### Round 3
+* **Products added:**  
+  * **Composite baskets**  
+    * `PICNIC_BASKET1` = 6 × `CROISSANTS` + 3 × `JAMS` + 1 × `DJEMBES`  
+    * `PICNIC_BASKET2` = 4 × `CROISSANTS` + 2 × `JAMS`  
+  * **Individual legs** now trade on their own orderbooks: `CROISSANTS`, `JAMS`, `DJEMBES`
+
+* **Position limits**
+  | Product | Limit |
+  |---------|------:|
+  | CROISSANTS | 250 |
+  | JAMS | 350 |
+  | DJEMBES | 60 |
+  | PICNIC_BASKET1 | 60 |
+  | PICNIC_BASKET2 | 100 |
+
+### Round 3  
+
+* **Products introduced**
+
+  * `VOLCANIC_ROCK` – the physical underlying  
+  * `Volcanic Rock Vouchers` (tradable options on the rock, all expiring in *7 trading days* at the start of Round 3):  
+    | Voucher | Strike (SeaShells) |
+    |---------|--------------------:|
+    | VOLCANIC_ROCK_VOUCHER_9500  | 9 500
+    | VOLCANIC_ROCK_VOUCHER_9750  | 9 750
+    | VOLCANIC_ROCK_VOUCHER_10000 | 10 000
+    | VOLCANIC_ROCK_VOUCHER_10250 | 10 250
+    | VOLCANIC_ROCK_VOUCHER_10500 | 10 500
+
+* **Position limits**
+
+  | Product | Limit |
+  |---------|------:|
+  | VOLCANIC_ROCK | 400 |
+  | VOLCANIC_ROCK_VOUCHER_9500 | 200 |
+  | VOLCANIC_ROCK_VOUCHER_9750 | 200 |
+  | VOLCANIC_ROCK_VOUCHER_10000 | 200 |
+  | VOLCANIC_ROCK_VOUCHER_10250 | 200 |
+  | VOLCANIC_ROCK_VOUCHER_10500 | 200 |
+
+* **Key hint:**  
+  * Estimate implied volatility (v_t) at each timestamp using Black-Scholes, plot it against moneyness:
+
+  ```math
+  m_t = \frac{\ln\!\bigl(K / S_t\bigr)}{\sqrt{\text{TTE}}}
+  ```
+  * Then, fit a parabola to filter noise, and watch the time-series of the fitted at-the-money IV for trading signals across strikes.
 
 ### Round 4
 
+* **Product introduced**  
+  * `MAGNIFICENT MACARONS` – a luxury confection whose price is driven by the island’s **sunlight index**, transport costs and tariffs.  
+    * Tradable **only via “conversion”** with the chef collective *Pristine Cuisine* at their posted bid/ask quotes.
+
+* **Limits & micro-fees**  
+  * **Position limit:** 75 units  
+  * **Conversion limit:** 10 units per request  
+  * **Storage fee:** 0.1 SeaShells *per timestamp* on **net-long** macarons (no cost when short)  
+  * Each conversion pays **transport fees** plus an **import/export tariff** on top of the quoted price.
+
+* **Hint (from the wiki)**  
+  * There exists a **Critical Sunlight Index (CSI)**.  
+    * **Sunlight < CSI:** panic over tight sugar & macaron supply → prices can spike far above fair value.  
+    * **Sunlight ≥ CSI:** both markets drift around fair value and react to normal supply-demand flows.  
+  * Detect when the sunlight index crosses CSI and position accordingly to capture the premium/discount in macaron prices.
+
 ### Round 5
+
+---
 
 ## Manual Trading Strategies 
 In parallel, you also have **72 hours** to place **one manual trade** each round.  
@@ -83,5 +155,3 @@ Manual and algorithmic challenges are independent, each giving you separate prof
 ### Round 4
 
 ### Round 5
-
----

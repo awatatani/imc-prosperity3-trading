@@ -9,9 +9,22 @@ Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 1
 
 ## Team Members
 
-**Anish Ranjan**
-
-**Allan Watatani**
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/Anish_Ranjan_Headshot.jpg" width="180"><br>
+      <strong>Anish&nbsp;Ranjan</strong><br>
+      <a href="https://www.linkedin.com/in/anishranjan28/">LinkedIn</a> ·
+      <a href="mailto:anish@example.com">Email</a>
+    </td>
+    <td align="center">
+      <img src="images/Allan_Watatani_Headshot.jpg" width="180"><br>
+      <strong>Allan&nbsp;Watatani</strong><br>
+      <a href="https://www.linkedin.com/in/allan-watatani-9575a4202/">LinkedIn</a> ·
+      <a href="mailto:awatatani6402@gmail.com">Email</a>
+    </td>
+  </tr>
+</table>
 
 ---
 

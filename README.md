@@ -193,42 +193,54 @@ Manual and algorithmic challenges are independent, each giving you separate prof
 
 ### Round 2
 
-* **Objective**  
-  Pick **up to two** washed-ashore shipping containers and keep a share of the treasure inside.
+* **Scenario**  
+  Shipwrecked **containers** wash ashore, and you may open **up to 2** of them to claim a share of the treasure inside.
 
-* **Key mechanics**  
-  * The **first container** you open is **free**; the **second** costs 50,000 SeaShells.  
-  * Each container has two hidden parameters:  
+* **Costs**
+  * **1st container:** free
+  * **2nd container:** pay an opening fee of 50,000 (deducted from your share).
+
+* **Key mechanics**   
+  * Each container has two parameters:  
     * **Treasure multiplier** (≤ 90) – scales the base loot of 10,000.  
     * **Inhabitants** (≤ 10) – the number of islanders expected to pick that same container.
       * Note: This doesn't include the actual competitors.
 
-* **Payout formula**
+* **Payout mechanics**  
+  1. **Raw treasure** for a container 
 
-```math
-\text{profit} \;=\;
-\frac{10\,000 \times \text{multiplier}}
-     {\text{inhabitants} \;+\; \text{global\_pick\_pct}}
-\;-\;
-\text{opening\_fee}
-```
+     ```math
+       \text{Treasure}=10{,}000 \times \text{multiplier}
+     ```
 
-* `global_pick_pct` = how often that container is chosen by other participants overall (as a % of all openings).
-* Your share is **divided** treasure **after** costs.
+  2. **Split** that treasure by
+
+     ```math
+       \text{divisor}=N_{\text{inhabitants}} + \bigl(\%\text{-times-chosen}\bigr)
+     ```  
+
+     *Example – 5 people choose a container that was picked on 10 % of all opens → divisor = 5 + 10 = 15.*
+
+  3. Subtract any **opening cost** on paid containers; what remains is your profit.
+
+  ```math
+   \text{profit} \;=\; \frac{\text{Treasure}}{\text{divisor}} \;-\; \text{opening fee}
+   ```
 
 * **Key hint**
   * A high multiplier is attractive **only** if few others open the same box.
   * Popular containers dilute returns; obscure picks are lucrative.
   * Weigh the second-container fee against the marginal treasure you expect to gain.
  
-Choose wisely and guess what the crowd is likely to do.
+* **Goal**  
+  * Select one or two containers to **maximize net SeaShells** after splits and fees.
 
 ---
 
 ### Round 3
 
 * **Scenario**  
-  * A flock of visiting **Sea Turtles** is ready to sell top-grade **FLIPPERS**.  
+  * **Sea Turtles** are ready to sell **FLIPPERS**.  
   * You may submit **two price bids**; each turtle decides independently whether to accept.
 
 * **Bid #1 – “Reserve-price” auction**  
@@ -254,6 +266,50 @@ Choose wisely and guess what the crowd is likely to do.
 ---
 
 ### Round 4
+
+* **Scenario**  
+  * A new **game-show** lets every participant open **up to 3 suitcases** full of SeaShells.  
+  * Suitcases differ by a hidden **prize multiplier** and will be **shared** with anyone else who picks the same case.
+
+* **Costs**  
+  * **1st suitcase:** free  
+  * **2nd & 3rd suitcases:** pay an opening fee of 50,000 and 100,000 (deducted from your share).
+
+* **Key mechanics**   
+  * Each suitcase has two parameters:  
+    * **Treasure multiplier** (≤ 90) – scales the base loot of 10,000.  
+    * **Inhabitants** (≤ 10) – the number of islanders expected to pick that same suitcase.
+      * Note: This doesn't include the actual competitors.
+
+* **Payout mechanics**  
+  1. **Raw treasure** for a suitcase 
+
+     ```math
+       \text{Treasure}=10{,}000 \times \text{multiplier}
+     ```
+
+  2. **Split** that treasure by
+
+     ```math
+       \text{divisor}=N_{\text{inhabitants}} + \bigl(\%\text{-times-chosen}\bigr)
+     ```  
+
+     *Example – 5 people choose a case that was picked on 10 % of all opens → divisor = 5 + 10 = 15.*
+
+  3. Subtract any **opening cost** on paid suitcases; what remains is your profit.
+
+  ```math
+   \text{profit} \;=\; \frac{\text{Treasure}}{\text{divisor}} \;-\; \text{opening fee}
+   ```
+
+* **Key hint**  
+  * Round 2 statistics reveal how frequently each container was picked—use that prior to estimate how crowded a suitcase might be.  
+  * With three picks available, balance:  
+    * **High multiplier & low crowding** (larger raw share)  
+    * **Opening fees** on 2nd/3rd choices
+
+* **Goal**  
+  * Select one, two or three suitcases to **maximize net SeaShells** after splits and fees.
 
 ---
 

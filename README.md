@@ -178,13 +178,50 @@ Manual and algorithmic challenges are independent, each giving you separate prof
 
 ### Round 1
 
-* **Objective**
-  * Start with SeaShells, route through *any* combination of island currencies, and finish back in SeaShells with a larger balance.
-  * Maximum number of hops is 5.
+* **Objective**  
+  * Begin with **SeaShells**, convert through up to **5 hops** of foreign island currencies, and end back in SeaShells with more than you started.  
+
+* **Inputs you receive**  
+  * A **4 × 4 exchange-rate matrix** `R` where  
+    `R[i][j]` = units of currency *j* you receive for **1** unit of currency *i*.  
+  * All rates are quoted **net of fees**, so the matrix is your entire “price sheet” for the round.
+
+* **Key hint**  
+  * Store paths as lists of indices, use `numpy.prod` on the corresponding `R` entries, and keep the arg-max. The entire search runs in milliseconds.
 
 ---
 
 ### Round 2
+
+* **Objective**  
+  Pick **up to two** washed-ashore shipping containers and keep a share of the treasure inside.
+
+* **Key mechanics**  
+  * The **first container** you open is **free**; the **second** costs 50,000 SeaShells.  
+  * Each container has two hidden parameters:  
+    * **Treasure multiplier** (≤ 90) – scales the base loot of 10,000.  
+    * **Inhabitants** (≤ 10) – the number of islanders expected to pick that same container.
+      * Note: This doesn't include the actual competitors.
+
+* **Payout formula**
+
+```math
+\text{profit} \;=\;
+\frac{10\,000 \times \text{multiplier}}
+     {\text{inhabitants} \;+\; \text{global\_pick\_pct}}
+\;-\;
+\text{opening\_fee}
+```
+
+* `global_pick_pct` = how often that container is chosen by other participants overall (as a % of all openings).
+* Your share is **divided** treasure **after** costs.
+
+* **Key hint**
+  * A high multiplier is attractive **only** if few others open the same box.
+  * Popular containers dilute returns; obscure picks are lucrative.
+  * Weigh the second-container fee against the marginal treasure you expect to gain.
+ 
+Choose wisely and guess what the crowd is likely to do.
 
 ---
 

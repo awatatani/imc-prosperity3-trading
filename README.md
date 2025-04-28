@@ -70,6 +70,9 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   * Squid Ink’s volatility makes large open positions risky.  
   * Price spikes tend to **mean-revert**—track the deviation from a recent average and fade extreme moves for edge.
 
+* **Further reading:**  
+  📘 See our full Round&nbsp;1 write-up&nbsp;→&nbsp;[detailed notebook](Round_1/round1_strats&analysis.ipynb)
+
 ### Round 2
 
 * **Products added:**  
@@ -132,7 +135,7 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   * **Storage fee:** 0.1 SeaShells *per timestamp* on **net-long** macarons (no cost when short)  
   * Each conversion pays **transport fees** plus an **import/export tariff** on top of the quoted price.
 
-* **Hint (from the wiki)**  
+* **Key hint:**  
   * There exists a **Critical Sunlight Index (CSI)**.  
     * **Sunlight < CSI:** panic over tight sugar & macaron supply → prices can spike far above fair value.  
     * **Sunlight ≥ CSI:** both markets drift around fair value and react to normal supply-demand flows.  

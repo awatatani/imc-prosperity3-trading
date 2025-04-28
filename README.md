@@ -4,8 +4,11 @@
 
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/awatatani/imc-prosperity3-trading/total)
 ![GitHub top language](https://img.shields.io/github/languages/top/awatatani/imc-prosperity3-trading)
+![GitHub Repo stars](https://img.shields.io/github/stars/awatatani/imc-prosperity3-trading)
 
 Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 15‑day Prosperity 3 challenge that resulted in `Top 25` in the World, and `Top 5` in the United States.
+
+⭐ **If you find this project helpful, please consider leaving us a star!**
 
 ## Team Members
 

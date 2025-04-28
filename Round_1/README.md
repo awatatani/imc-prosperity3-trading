@@ -1,3 +1,3 @@
 # Round 1 In-Depth Implementation
 
-This is our round 1 implementation.
+In the Jupyter Notebook, we have a deep dive into our strategies. Hope this helps!

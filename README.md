@@ -159,18 +159,45 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
 
 ### Round 5
 
+* **Product introduced**
+  * *None* - the tradable set is identical to Round 4.
+
+* **Position limits**
+  * Unchanged from the previous round for every product.
+
+* **Kye hint**
+  * Your own fills now expose a `counter_party` field.
+
 ---
 
 ## Manual Trading Strategies 
 In parallel, you also have **72 hours** to place **one manual trade** each round.  
 Manual and algorithmic challenges are independent, each giving you separate profit opportunities.
 
+---
+
 ### Round 1
+
+* **Objective**
+  * Start with SeaShells, route through *any* combination of island currencies, and finish back in SeaShells with a larger balance.
+  * Maximum number of hops is 5.
+
+---
 
 ### Round 2
 
+---
+
 ### Round 3
+
+---
 
 ### Round 4
 
+---
+
 ### Round 5
+
+
+
+---

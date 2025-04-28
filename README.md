@@ -55,9 +55,11 @@ Algorithmic and manual trading strategies, backtests, and analysis for IMC’s 1
 ## Algorithmic Trading Strategies
 You have **72 hours per round** to upload your Python algorithm. The **last successfully processed submission** before the deadline is used for that round’s trading session.
 
+---
+
 ### Round 1
 
-* **Products introduced:**  
+* **Products introduced**  
   * `RAINFOREST_RESIN` – historically stable  
   * `KELP` – regular ups & downs  
   * `SQUID_INK` – large, fast swings; rumored price pattern  
@@ -69,16 +71,18 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   | KELP | 50 |
   | SQUID_INK | 50 |
 
-* **Key hint:**  
+* **Key hint**  
   * Squid Ink’s volatility makes large open positions risky.  
   * Price spikes tend to **mean-revert**—track the deviation from a recent average and fade extreme moves for edge.
 
 * **Further reading:**  
   📘 See our full Round&nbsp;1 write-up&nbsp;→&nbsp;[detailed notebook](Round_1/round1_strats&analysis.ipynb)
 
+---
+
 ### Round 2
 
-* **Products added:**  
+* **Products added**  
   * **Composite baskets**  
     * `PICNIC_BASKET1` = 6 × `CROISSANTS` + 3 × `JAMS` + 1 × `DJEMBES`  
     * `PICNIC_BASKET2` = 4 × `CROISSANTS` + 2 × `JAMS`  
@@ -93,12 +97,14 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   | PICNIC_BASKET1 | 60 |
   | PICNIC_BASKET2 | 100 |
 
+---
+
 ### Round 3  
 
 * **Products introduced**
 
   * `VOLCANIC_ROCK` – the physical underlying  
-  * `Volcanic Rock Vouchers` (tradable options on the rock, all expiring in *7 trading days* at the start of Round 3):  
+  * `VOLCANIC_ROCK_VOUCHER_XXXX` (tradable options on the rock, all expiring in *7 trading days* at the start of Round 3):  
     | Voucher | Strike (SeaShells) |
     |---------|--------------------:|
     | VOLCANIC_ROCK_VOUCHER_9500  | 9 500
@@ -109,7 +115,7 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
 
 * **Position limits**
 
-  | Product | Limit |
+  | Product/Voucher | Limit |
   |---------|------:|
   | VOLCANIC_ROCK | 400 |
   | VOLCANIC_ROCK_VOUCHER_9500 | 200 |
@@ -118,7 +124,7 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   | VOLCANIC_ROCK_VOUCHER_10250 | 200 |
   | VOLCANIC_ROCK_VOUCHER_10500 | 200 |
 
-* **Key hint:**  
+* **Key hint**  
   * Estimate implied volatility (v_t) at each timestamp using Black-Scholes, plot it against moneyness:
 
   ```math
@@ -126,23 +132,30 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   ```
   * Then, fit a parabola to filter noise, and watch the time-series of the fitted at-the-money IV for trading signals across strikes.
 
+---
+
 ### Round 4
 
 * **Product introduced**  
-  * `MAGNIFICENT MACARONS` – a luxury confection whose price is driven by the island’s **sunlight index**, transport costs and tariffs.  
-    * Tradable **only via “conversion”** with the chef collective *Pristine Cuisine* at their posted bid/ask quotes.
+  * `MAGNIFICENT MACARONS` – can be bought or sold **only through conversion** with *Pristine Cuisine* at their posted bid / ask prices.
 
-* **Limits & micro-fees**  
-  * **Position limit:** 75 units  
+* **Position limits**
+  | Product | Limit |
+  |---------|------:|
+  | MACARONS | 75 |
+
+* **Other limits & micro-fees**   
   * **Conversion limit:** 10 units per request  
   * **Storage fee:** 0.1 SeaShells *per timestamp* on **net-long** macarons (no cost when short)  
   * Each conversion pays **transport fees** plus an **import/export tariff** on top of the quoted price.
 
-* **Key hint:**  
+* **Key hint**  
   * There exists a **Critical Sunlight Index (CSI)**.  
     * **Sunlight < CSI:** panic over tight sugar & macaron supply → prices can spike far above fair value.  
     * **Sunlight ≥ CSI:** both markets drift around fair value and react to normal supply-demand flows.  
   * Detect when the sunlight index crosses CSI and position accordingly to capture the premium/discount in macaron prices.
+
+---
 
 ### Round 5
 

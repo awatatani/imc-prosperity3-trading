@@ -315,6 +315,17 @@ Manual and algorithmic challenges are independent, each giving you separate prof
 
 ### Round 5
 
+* **Scenario**  
+  * A **one-day invitational** on the West Archipelago Exchange.  
+  * Benny the Bull grants access to the **Goldberg news feed** for last-minute market intel.  
 
+* **Costs & mechanics**  
+  * **Initial capital:** 1 000 000 SeaShells.  
+  * For each foreign good, specify the **% of capital to buy or sell**.  
+  * **Sliding fees:** the **more volume you trade in a product, the higher its fee** band becomes.  
+
+* **Goal**  
+  * Use Goldberg’s hints to target the best risk-adjusted goods.  
+  * Balance position size against escalating fees to **finish the day with the largest net SeaShell stack**.
 
 ---

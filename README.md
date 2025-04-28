@@ -104,7 +104,7 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
 * **Products introduced**
 
   * `VOLCANIC_ROCK` – the physical underlying  
-  * `VOLCANIC_ROCK_VOUCHER_XXXX` (tradable options on the rock, all expiring in *7 trading days* at the start of Round 3):  
+  * `VOLCANIC_ROCK_VOUCHER_XXXX` (tradable options on the rock, all expiring in *7 trading days* at the start of Round 1):  
     | Voucher | Strike (SeaShells) |
     |---------|--------------------:|
     | VOLCANIC_ROCK_VOUCHER_9500  | 9 500

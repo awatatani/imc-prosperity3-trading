@@ -227,6 +227,30 @@ Choose wisely and guess what the crowd is likely to do.
 
 ### Round 3
 
+* **Scenario**  
+  * A flock of visiting **Sea Turtles** is ready to sell top-grade **FLIPPERS**.  
+  * You may submit **two price bids**; each turtle decides independently whether to accept.
+
+* **Bid #1 – “Reserve-price” auction**  
+  * Each turtle carries a hidden reserve price drawn **uniformly** from  
+    * **160 – 200** or **250 – 320** (nothing falls between 200 and 250).  
+  * A turtle sells you one flipper **iff** your first bid is **≥ its reserve price**.
+
+* **Bid #2 – “Average-aware” auction**  
+  * Turtles compare all traders’ second bids.  
+  * If **your bid ≥ the global average**, turtles use the same rule as Bid #1.  
+  * If **your bid < average**, any profit from those trades is **down-scaled** by
+
+    ```math
+      p \;=\;\left(\frac{320 - \text{avgBid}}{320 - \text{yourBid}}\right)^{\!3}
+    ```
+
+* **Exit price**  
+  * Every flipper you acquire can be **resold at 320 SeaShells** each at round end.
+
+* **Goal**  
+  * Choose two bid prices that balance fill-probability vs. margin, factoring in the unknown average second-bid.
+
 ---
 
 ### Round 4

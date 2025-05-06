@@ -97,6 +97,9 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   | PICNIC_BASKET1 | 60 |
   | PICNIC_BASKET2 | 100 |
 
+* **Further reading:**  
+  📘 See our full Round&nbsp;2 write-up&nbsp;→&nbsp;[detailed notebook](Round_2/round2_strats&analysis.ipynb)
+
 ---
 
 ### Round 3  

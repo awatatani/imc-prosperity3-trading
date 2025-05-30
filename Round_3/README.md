@@ -4,7 +4,7 @@ Dive into our full **Round 3** analysis and trading logic inside the [Jupyter No
 
 ## Important Dependencies
 
-This notebook utilizes *Plotly.js* to produce beautiful images like so:
+This notebook utilizes *Plotly.js* to produce beautiful **interactive** images like so:
 
 ![Description of image](newplot.png)
 

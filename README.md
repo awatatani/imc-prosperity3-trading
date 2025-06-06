@@ -135,6 +135,8 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
   ```
   * Then, fit a parabola to filter noise, and watch the time-series of the fitted at-the-money IV for trading signals across strikes.
 
+* **Further reading:**  
+  📘 See our full Round&nbsp;3 write-up&nbsp;→&nbsp;[detailed notebook](Round_3/round3_strats&analysis.ipynb)
 ---
 
 ### Round 4
@@ -157,6 +159,9 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
     * **Sunlight < CSI:** panic over tight sugar & macaron supply → prices can spike far above fair value.  
     * **Sunlight ≥ CSI:** both markets drift around fair value and react to normal supply-demand flows.  
   * Detect when the sunlight index crosses CSI and position accordingly to capture the premium/discount in macaron prices.
+ 
+* **Further reading:**  
+  📘 See our full Round&nbsp;4 write-up&nbsp;→&nbsp;[detailed notebook](Round_4/round4_strats&analysis.ipynb)
 
 ---
 
@@ -168,7 +173,7 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
 * **Position limits**
   * Unchanged from the previous round for every product.
 
-* **Kye hint**
+* **Key hint**
   * Your own fills now expose a `counter_party` field.
 
 ---
@@ -177,6 +182,8 @@ You have **72 hours per round** to upload your Python algorithm. The **last suc
 In parallel, you also have **72 hours** to place **one manual trade** each round.  
 Manual and algorithmic challenges are independent, each giving you separate profit opportunities.
 
+* **Further reading:**  
+  📘 See our full Round&nbsp;5 write-up&nbsp;→&nbsp;[detailed notebook](Round_5/round5_strats&analysis.ipynb)
 ---
 
 ### Round 1
